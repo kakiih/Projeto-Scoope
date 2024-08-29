@@ -1,7 +1,7 @@
 import NavBar from './componentes/NavBar';
 import './App.scss';
 import Login from './componentes/Login';
-// import Botao from './componentes/Botao';
+import Botao from './componentes/Botao';
 // import TesteGrid from './componentes/TesteGrid';
 // import Colunas from './componentes/texto';
 import Carrossel from './componentes/Carrossel';
@@ -13,6 +13,7 @@ function App() {
       <NavBar/>
       <Carrossel/>
       <Login/>
+      <Botao cor="primary" txtb="Enviar"/>
       <Footer/>
     </>
   );

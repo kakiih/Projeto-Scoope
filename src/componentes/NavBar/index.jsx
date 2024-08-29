@@ -19,17 +19,17 @@ function NavBar() {
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
                 <a className="nav-link" href="www.javascript:void(0)">
-                  Menu
+                  Sobre nós
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="www.javascript:void(0)">
-                  Menu
+                  Contato
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="www.javascript:void(0)">
-                  Menu
+                  
                 </a>
               </li>
             </ul>
