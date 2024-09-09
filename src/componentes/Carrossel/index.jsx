@@ -6,7 +6,6 @@ function Carrossel() {
         className="carousel slide col-6 mx-auto"
         data-bs-ride="carousel"
       >
-        {/* <!-- Indicators/dots --> */}
         <div className="carousel-indicators">
           <button
             type="button"
@@ -30,7 +29,6 @@ function Carrossel() {
           ></button>
         </div>
 
-        {/* <!-- The slideshow/carousel --> */}
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
@@ -55,7 +53,6 @@ function Carrossel() {
           </div>
         </div>
 
-        {/* <!-- Left and right controls/icons --> */}
         <button
           className="carousel-control-prev"
           type="button"

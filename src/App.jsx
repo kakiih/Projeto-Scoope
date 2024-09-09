@@ -1,20 +1,23 @@
 import NavBar from './componentes/NavBar';
 import './App.scss';
-import Login from './componentes/Login';
-import Botao from './componentes/Botao';
-// import TesteGrid from './componentes/TesteGrid';
-// import Colunas from './componentes/texto';
-import Carrossel from './componentes/Carrossel';
 import Footer from './componentes/Footer';
+import { BrowserRouter, Route, Routes, } from 'react-router-dom';
+import Contato from './Rotas/Contato';
+import Sobre from './Rotas/Sobre';
+import Home from './Rotas/Home';
 
 function App() {
   return (
     <>
-      <NavBar/>
-      <Carrossel/>
-      <Login/>
-      <Botao cor="primary" txtb="Enviar"/>
-      <Footer/>
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route index path="/" element={<Home />} />
+          <Route index path="/Sobre" element={<Sobre />} />
+          <Route index path="/Contato" element={<Contato />} />
+        </Routes>
+        <Footer/>
+      </BrowserRouter>
     </>
   );
 }

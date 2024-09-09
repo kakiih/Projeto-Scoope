@@ -51,7 +51,7 @@ function Footer() {
         </div>
 
         <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-          <p className="col-md-11 text-center">© 2024 Company, Inc. All rights reserved.</p>
+          <p className="col-md-11 text-center">© 2024 Companhia, Todos os direitos reservados.</p>
           <ul className="list-unstyled d-flex">
             <li className="ms-3"><a className="link-body-emphasis" href="/"><svg className="bi" width="24" height="24"><path d="..."/></svg></a></li>
             <li className="ms-3"><a className="link-body-emphasis" href="/"><svg className="bi" width="24" height="24"><path d="..."/></svg></a></li>
