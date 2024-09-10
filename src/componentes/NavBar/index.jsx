@@ -5,7 +5,7 @@ function NavBar() {
       <nav className="navbar navbar-expand-sm navbar-dark bg-primary py-3">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            Home
+            Inicio
           </a>
           <button
             className="navbar-toggler"

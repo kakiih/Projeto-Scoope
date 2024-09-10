@@ -1,4 +1,4 @@
-function Login() {
+function Forms() {
   return (
     <>
       <div className="container mt-3">
@@ -106,4 +106,4 @@ function Login() {
     </>
   );
 }
-export default Login;
+export default Forms;

@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import Contato from './Rotas/Contato';
 import Sobre from './Rotas/Sobre';
 import Home from './Rotas/Home';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Login from './Rotas/Login';
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
           <Route index path="/" element={<Home />} />
           <Route index path="/Sobre" element={<Sobre />} />
           <Route index path="/Contato" element={<Contato />} />
+          <Route index path='/login' element={<Login/>} />
         </Routes>
         <Footer/>
       </BrowserRouter>
