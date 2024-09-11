@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 const TelaSign = () => {
     const gradientCustom4 = {
@@ -34,6 +35,16 @@ const TelaSign = () => {
                         className="form-control form-control-lg"
                       />
                       <label className="form-label" htmlFor="form3Example3cg">Email</label>
+                    </div>
+
+                    <div className="form-outline mb-4">
+                      <input
+                        type="text"
+                        id="form3Example3cg"
+                        placeholder="000.000.000-00"
+                        className="form-control form-control-lg"
+                      />
+                      <label className="form-label" htmlFor="form3Example3cg">CPF</label>
                     </div>
 
                     <div className="form-outline mb-4">
@@ -79,7 +90,7 @@ const TelaSign = () => {
                     </div>
 
                     <p className="text-center text-muted mt-5 mb-0">
-                      Já tem uma conta? faça o <a href="/login" className="fw-bold text-body"><u>Login aqui</u></a>
+                      Já tem uma conta? faça o <Link to="/login" className="fw-bold text-body"><u>Login aqui</u></Link>
                     </p>
                   </form>
                 </div>

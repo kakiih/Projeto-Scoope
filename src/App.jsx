@@ -16,10 +16,10 @@ function App() {
         <NavBar/>
         <Routes>
           <Route index path="/" element={<Home/>} />
-          <Route index path="/sobre" element={<Sobre/>} />
-          <Route index path="/contato" element={<Contato/>} />
-          <Route index path='/sign' element={<SignUp/>} />
-          <Route index path='/login' element={<Login/>} />
+          <Route path="/sobre" element={<Sobre/>} />
+          <Route path="/contato" element={<Contato/>} />
+          <Route path='/sign' element={<SignUp/>} />
+          <Route path='/login' element={<Login/>} />
         </Routes>
         <Footer/>
       </BrowserRouter>

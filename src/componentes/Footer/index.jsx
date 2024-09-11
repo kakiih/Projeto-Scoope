@@ -30,7 +30,7 @@ function Footer() {
             role="button"
             data-mdb-ripple-color="dark"
           >
-            <i className="fab fa-twitter"></i>
+            <i className="fab fa-whatsapp"></i>
           </a>
 
           {/* Google */}

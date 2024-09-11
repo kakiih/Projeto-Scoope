@@ -39,7 +39,7 @@ const TelaLogin = () => {
                     </div>
 
                     <div className="d-flex justify-content-center">
-                      <a href="/login">
+                      <a href="/">
                       <button
                         type="button"
                         className="btn btn-success btn-block btn-lg"
