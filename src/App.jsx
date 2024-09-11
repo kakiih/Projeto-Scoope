@@ -7,6 +7,7 @@ import Sobre from './Rotas/Sobre';
 import Home from './Rotas/Home';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Login from './Rotas/Login';
+import SignUp from './Rotas/SignUp';
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
       <BrowserRouter>
         <NavBar/>
         <Routes>
-          <Route index path="/" element={<Home />} />
-          <Route index path="/Sobre" element={<Sobre />} />
-          <Route index path="/Contato" element={<Contato />} />
+          <Route index path="/" element={<Home/>} />
+          <Route index path="/sobre" element={<Sobre/>} />
+          <Route index path="/contato" element={<Contato/>} />
+          <Route index path='/sign' element={<SignUp/>} />
           <Route index path='/login' element={<Login/>} />
         </Routes>
         <Footer/>

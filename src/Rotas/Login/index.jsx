@@ -1,10 +1,10 @@
-import TelaLogin from "../../componentes/TelaLogin"
+import TelaLogin from "../../componentes/TelaLogin";
 
-function Login(){
-    return(
-        <>
-        <TelaLogin/>
-        </>
-    )
+function Login() {
+  return (
+    <>
+    <TelaLogin/>
+    </>
+  );
 }
-export default Login
+export default Login;
