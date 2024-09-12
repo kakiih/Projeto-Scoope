@@ -8,6 +8,9 @@ import Home from './Rotas/Home';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Login from './Rotas/Login';
 import SignUp from './Rotas/SignUp';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import CataratasDoIguacuPage from './componentes/PaginaIguaçu';
 
 function App() {
   return (
@@ -20,6 +23,7 @@ function App() {
           <Route path="/contato" element={<Contato/>} />
           <Route path='/sign' element={<SignUp/>} />
           <Route path='/login' element={<Login/>} />
+          <Route path='/CataratasDoIguaçu' element={<CataratasDoIguacuPage/>} />
         </Routes>
         <Footer/>
       </BrowserRouter>

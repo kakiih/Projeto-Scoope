@@ -3,9 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
 const TelaSign = () => {
-    const gradientCustom4 = {
-      background: 'linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))'
-    };
+  const gradientCustom4 = {
+    background: 'linear-gradient(to right, #3b9ae7f8, #0b618b)'
+  };
   return (
     <section
       style={{

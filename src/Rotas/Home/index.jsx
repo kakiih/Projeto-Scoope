@@ -1,11 +1,17 @@
 import React from "react"
-import Colunas from "../../componentes/Colunas"
+import BuscaViagens from "../../componentes/BuscaPassagens"
+import DestaquesDestinos from "../../componentes/PrincipaisDestinos"
+import OfertasPromoções from "../../componentes/Ofertas"
+import Depoimentos from "../../componentes/DepoimentosClientes"
+import ChamadaParaAcao from "../../componentes/ChamadaAcao"
 function Home(){
     return(
         <>
-        <h1>Você está na pagina Inicial</h1>
-        <Colunas/>
-        <Colunas/>
+        <BuscaViagens/>
+        <DestaquesDestinos/>
+        <OfertasPromoções/>
+        <Depoimentos/>
+        <ChamadaParaAcao/>
         </>
     )
 }
