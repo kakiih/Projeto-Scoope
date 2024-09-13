@@ -11,6 +11,14 @@ import SignUp from './Rotas/SignUp';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import CataratasDoIguacuPage from './componentes/PaginaIguaçu';
+import RioDeJaneiroPage from './componentes/PaginaRiodejaneiro';
+import SalvadorPage from './componentes/PaginaSalvador';
+import RecifePage from './componentes/PaginaRecife';
+import MaranhaoPage from './componentes/PaginaMaranhão';
+import SaoPauloPage from './componentes/PaginaSaoPaulo';
+import BeloHorizontePage from './componentes/Oferta1';
+import FlorianopolisPage from './componentes/Oferta2';
+import CuritibaPage from './componentes/Oferta3';
 
 function App() {
   return (
@@ -23,7 +31,15 @@ function App() {
           <Route path="/contato" element={<Contato/>} />
           <Route path='/sign' element={<SignUp/>} />
           <Route path='/login' element={<Login/>} />
-          <Route path='/CataratasDoIguaçu' element={<CataratasDoIguacuPage/>} />
+          <Route path='/fozdoiguacu' element={<CataratasDoIguacuPage/>} />
+          <Route path='/riodejaneiro' element={<RioDeJaneiroPage/>} />
+          <Route path='/salvador' element={<SalvadorPage/>} />
+          <Route path='/recife' element={<RecifePage/>} />
+          <Route path='/lencoismaranhenses' element={<MaranhaoPage/>} />
+          <Route path='/saopaulo' element={<SaoPauloPage/>} />
+          <Route path='/belohorizonte' element={<BeloHorizontePage/>} />
+          <Route path='/florianopolis' element={<FlorianopolisPage/>} />
+          <Route path='/curitiba' element={<CuritibaPage/>} />
         </Routes>
         <Footer/>
       </BrowserRouter>

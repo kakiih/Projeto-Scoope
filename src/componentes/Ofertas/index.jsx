@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const ofertas = [
-  { titulo: 'Pacote Paris 7 dias', descricao: 'Inclui voo e hotel com desconto.', preco: 'R$ 4.000', imagem: 'https://picsum.photos/seed/paris-offer/400/300' },
-  { titulo: 'Nova York - 3 noites', descricao: 'Apenas hospedagem com café da manhã.', preco: 'R$ 1.500', imagem: 'https://picsum.photos/seed/nyc-offer/400/300' },
-  { titulo: 'Tóquio - Tour Completo', descricao: 'Inclui passeios e transporte.', preco: 'R$ 6.000', imagem: 'https://picsum.photos/seed/tokyo-offer/400/300' },
+  { titulo: 'Pacote Belo Horizonte - 4 dias', descricao: 'Inclui voo e hospedagem com café da manhã.', preco: 'R$ 2.500', imagem: 'https://images.pexels.com/photos/11589770/pexels-photo-11589770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', redirecionamento: '/belohorizonte'},
+  { titulo: 'Florianópolis - 5 noites', descricao: 'Hospedagem em hotel próximo à praia e passeios incluídos.', preco: 'R$ 3.000', imagem: 'https://picsum.photos/seed/floripa-offer/400/300', redirecionamento: '/florianopolis' },
+  { titulo: 'Curitiba - 3 noites', descricao: 'Inclui hospedagem e passeios pelos principais pontos turísticos.', preco: 'R$ 1.800', imagem: 'https://picsum.photos/seed/curitiba-offer/400/300', redirecionamento: '/curitiba' },
 ];
 
 function OfertasPromoções() {
@@ -20,7 +21,7 @@ function OfertasPromoções() {
                 <Card.Title>{oferta.titulo}</Card.Title>
                 <Card.Text>{oferta.descricao}</Card.Text>
                 <Card.Text><strong>{oferta.preco}</strong></Card.Text>
-                <Button variant="danger">Aproveite</Button>
+                <Link to={oferta.redirecionamento}><Button variant="danger">Aproveite</Button></Link>
               </Card.Body>
             </Card>
           </div>
