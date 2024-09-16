@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Botao from '../Botao';
 import { Navbar } from 'react-bootstrap';
 import React, { useRef, useEffect } from 'react';
 
@@ -59,7 +58,9 @@ function NavBar() {
           </ul>
           <form className="d-flex">
             <Link to="/sign">
-              <Botao txtb="Cadastre-se" arredondar="rounded-pill" borda="border border-white"/> 
+            <div className="d-flex justify-content-center align-items-center rounded-circle border border-white" style={{ width: "40px", height: "40px" }}> 
+              <i className="fas fa-user text-white" style={{ fontSize: "20px" }}></i>
+            </div>
             </Link>               
           </form>
         </div>
