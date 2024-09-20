@@ -15,7 +15,7 @@ function Footer() {
           <a
             data-mdb-ripple-init
             className="btn btn-link btn-floating btn-lg text-body m-1"
-            href="#!"
+            href="https://www.facebook.com"
             role="button"
             data-mdb-ripple-color="dark"
           >

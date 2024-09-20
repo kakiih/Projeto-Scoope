@@ -6,7 +6,6 @@ function Sobre(){
         <>
         <h1>Você está na pagina Sobre-nós</h1>
         <Colunas/>
-        <Colunas/>
         </>
     )
 }
