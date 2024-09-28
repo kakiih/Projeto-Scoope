@@ -1,3 +1,29 @@
+.form-container {
+  background-color: #f9f9f9; // Cor de fundo suave
+  border-radius: 15px; // Arredondar os cantos
+  padding: 30px; // Espaçamento interno
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Sombra suave
+}
+
+.rounded-input {
+  border-radius: 10px; // Arredondar os campos de entrada
+  border: 1px solid #ccc; // Borda padrão
+  transition: border-color 0.3s; // Transição suave para a cor da borda
+
+  &:focus {
+    border-color: #3b9ae7; // Cor da borda quando focado
+    box-shadow: 0 0 5px rgba(59, 154, 231, 0.5); // Sombra ao focar
+  }
+}
+
+h2 {
+  color: #0b618b; // Cor do título
+}
+
+button {
+  border-radius: 10px; // Arredondar o botão
+}
+
 .busca-viagens-container {
     background-color: #f0f8ff; 
     padding: 20px;
