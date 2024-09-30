@@ -1,84 +1,50 @@
 import React from "react";
+import { Carousel } from "react-bootstrap";
+import "./index.scss"
 function Carrossel() {
   return (
     <>
-      <div
-        id="demo"
-        className="carousel slide col-6 mx-auto"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#demo"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#demo"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#demo"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-
-        <div className="carousel-inner">
-          <div className="carousel-item active">
+        <Carousel>
+        <Carousel.Item>
+          <div className="carousel-image-container">
             <img
-              src="https://picsum.photos/1080/720"
-              alt="Los Angeles"
-              className="d-block w-100"
+              className="carousel-image"
+              src="https://cdn.pixabay.com/photo/2015/05/25/19/37/bahamas-783799_960_720.jpg"
+              alt="Primeira Oferta"
             />
           </div>
-          <div className="carousel-item">
+          <Carousel.Caption>
+            <h3>Oferta Especial para o Caribe</h3>
+            <p>Aproveite 30% de desconto em viagens para o Caribe.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="carousel-image-container">
             <img
-              src="https://picsum.photos/1080/721"
-              alt="Chicago"
-              className="d-block w-100"
+              className="carousel-image"
+              src="https://cdn.pixabay.com/photo/2016/01/16/17/13/big-ben-1143631_1280.jpg"
+              alt="Segunda Oferta"
             />
           </div>
-          <div className="carousel-item">
+          <Carousel.Caption>
+            <h3>Pacotes para Europa com Desconto</h3>
+            <p>Descontos imperdíveis para Paris, Roma e Londres.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="carousel-image-container">
             <img
-              src="https://picsum.photos/1081/720"
-              alt="New York"
-              className="d-block w-100"
+              className="carousel-image"
+              src="https://cdn.pixabay.com/photo/2014/06/06/18/05/kyoto-363636_960_720.jpg"
+              alt="Terceira Oferta"
             />
           </div>
-        </div>
-
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#demo"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#demo"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
+          <Carousel.Caption>
+            <h3>Aventura na Ásia</h3>
+            <p>Explore o Japão e a Tailândia com preços exclusivos.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
     </>
   );
 }

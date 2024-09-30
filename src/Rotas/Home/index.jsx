@@ -4,10 +4,12 @@ import DestaquesDestinos from "../../componentes/PrincipaisDestinos"
 import OfertasPromoções from "../../componentes/Ofertas"
 import Depoimentos from "../../componentes/DepoimentosClientes"
 import ChamadaParaAcao from "../../componentes/ChamadaAcao"
+import Carrossel from "../../componentes/Carrossel"
 function Home(){
     return(
         <>
         <BuscaViagens/>
+        <Carrossel/>
         <DestaquesDestinos/>
         <OfertasPromoções/>
         <Depoimentos/>

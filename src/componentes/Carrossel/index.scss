@@ -1,0 +1,12 @@
+.carousel-image-container {
+    width: 100%;
+    height: 500px; /* Definindo uma altura fixa para o carrossel */
+    overflow: hidden; /* Escondendo qualquer conteúdo que ultrapasse o tamanho */
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção da imagem e corta o excesso */
+  }
+  

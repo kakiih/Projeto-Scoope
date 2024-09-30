@@ -1,18 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const TelaSign = () => {
   const gradientCustom4 = {
     background: 'linear-gradient(to right, #3b9ae7f8, #0b618b)',
   };
 
-  // Função para lidar com a validação do formulário
+  const navigate = useNavigate(); // Iniciar useNavigate
+
+  const [cpf, setCpf] = useState(''); // Estado para armazenar o CPF
+
+  // Função para formatar o CPF
+  const handleCpfChange = (event) => {
+    const input = event.target.value
+      .replace(/\D/g, '') // Remove tudo que não é dígito
+      .slice(0, 11); // Limita a 11 caracteres
+
+    // Adiciona a formatação
+    let formattedCpf = input;
+    if (input.length > 6) {
+      formattedCpf = `${input.slice(0, 3)}.${input.slice(3, 6)}.${input.slice(6, 9)}-${input.slice(9, 11)}`;
+    } else if (input.length > 3) {
+      formattedCpf = `${input.slice(0, 3)}.${input.slice(3, 6)}`;
+    } else if (input.length > 0) {
+      formattedCpf = input.slice(0, 3);
+    }
+
+    setCpf(formattedCpf); // Atualiza o estado do CPF
+  };
+
+  // Função para lidar com a validação do formulário e redirecionar
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
     if (!form.checkValidity()) {
       form.classList.add('was-validated');
+    } else {
+      // Se a validação for bem-sucedida, redireciona para a página principal
+      navigate('/');
     }
   };
 
@@ -31,11 +57,11 @@ const TelaSign = () => {
                     <div className="form-outline mb-4">
                       <input
                         type="text"
-                        id="form3Example1cg"
+                        id="name"
                         className="form-control form-control-lg"
                         required
                       />
-                      <label className="form-label" htmlFor="form3Example1cg">
+                      <label className="form-label" htmlFor="name">
                         Seu nome completo
                       </label>
                       <div className="invalid-feedback">
@@ -46,11 +72,11 @@ const TelaSign = () => {
                     <div className="form-outline mb-4">
                       <input
                         type="email"
-                        id="form3Example3cg"
+                        id="email"
                         className="form-control form-control-lg"
                         required
                       />
-                      <label className="form-label" htmlFor="form3Example3cg">
+                      <label className="form-label" htmlFor="email">
                         Email
                       </label>
                       <div className="invalid-feedback">
@@ -61,15 +87,19 @@ const TelaSign = () => {
                     <div className="form-outline mb-4">
                       <input
                         type="text"
-                        id="form3Example3cg"
+                        id="cpf"
                         placeholder="000.000.000-00"
+                        value={cpf} // Usar o estado formatado do CPF
+                        onChange={handleCpfChange} // Adicionar o manipulador de eventos
                         className="form-control form-control-lg"
                         required
                       />
-                      <label className="form-label" htmlFor="form3Example3cg">
+                      <label className="form-label" htmlFor="cpf">
                         CPF
                       </label>
-                      <div className="invalid-feedback">Por favor, insira seu CPF.</div>
+                      <div className="invalid-feedback">
+                        Por favor, insira seu CPF.
+                      </div>
                     </div>
 
                     <div className="form-outline mb-4">

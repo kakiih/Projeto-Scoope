@@ -1,0 +1,40 @@
+#sobre-nos {
+    background-color: #f7f9fc;
+    
+    h1, h2 {
+      color: #0b618b;
+    }
+  
+    .timeline {
+      list-style: none;
+      padding: 0;
+      position: relative;
+      
+      li {
+        margin-bottom: 20px;
+        position: relative;
+        padding-left: 30px;
+        
+        &::before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          background-color: #3b9ae7f8;
+          border-radius: 50%;
+          position: absolute;
+          left: 0;
+          top: 5px;
+        }
+      }
+    }
+  
+    .card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: none;
+    }
+  }
+  
+  #imagemdaempresa {
+    max-width: 400px;
+    max-height: 300px;
+  }

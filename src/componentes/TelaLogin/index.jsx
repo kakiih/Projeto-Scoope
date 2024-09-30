@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from 'react-router-dom'; // Importar useNavigate
 
 const TelaLogin = () => {
   const gradientCustom4 = {
@@ -7,11 +8,17 @@ const TelaLogin = () => {
   };
 
   // Função para lidar com a validação do formulário
+  const navigate = useNavigate(); // Iniciar useNavigate
+
+  // Função para lidar com a validação do formulário e redirecionar
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
     if (!form.checkValidity()) {
       form.classList.add('was-validated');
+    } else {
+      // Se a validação for bem-sucedida, redireciona para a página principal
+      navigate('/');
     }
   };
 
@@ -30,7 +37,7 @@ const TelaLogin = () => {
                     <div className="form-outline mb-4">
                       <input
                         type="email"
-                        id="form3Example3cg"
+                        id="email"
                         className="form-control form-control-lg"
                         required
                       />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.scss'; // Importar o CSS
+import './index.scss'; 
 
 function BuscaViagens() {
   const [formData, setFormData] = useState({
@@ -33,8 +33,8 @@ function BuscaViagens() {
   };
 
   return (
-    <div className="container mt-5">
-      <h2 className="mb-4 text-center">Buscar Viagens</h2>
+    <div className="container mt-4">
+      <h2 className="mb-2 text-center">Buscar Viagens</h2>
       <div className="form-container">
         <Form onSubmit={handleSubmit}>
           <Row className="justify-content-center">
@@ -167,6 +167,7 @@ function BuscaViagens() {
           </div>
         </Form>
       </div>
+      <br/>
     </div>
   );
 }
