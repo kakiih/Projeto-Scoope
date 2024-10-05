@@ -25,7 +25,7 @@ const CompraDestino = ({ destino }) => {
                   <li>Opções de passeios adicionais</li>
                 </ul>
               </Card.Text>
-              <Button variant="primary" href="#compra">Comprar Pacote</Button>
+              <Button variant="primary" href="#compra">Adicionar ao carrinho</Button>
             </Card.Body>
           </Card>
         </Col>

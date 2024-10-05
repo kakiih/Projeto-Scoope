@@ -12,19 +12,20 @@ const SobreNos = () => {
 
   return (
     <Container fluid className="py-5" id="sobre-nos">
-      <Row className="text-center mb-4">
-        <Col>
-          <h1 className="display-4">Quem Somos</h1>
-          <p className="lead">Conheça nossa história, missão, visão e valores.</p>
-        </Col>
-      </Row>
+
+        <Row className="text-center mb-4">
+          <Col>
+            <h1 className="display-4">Quem Somos</h1>
+            <p className="lead">Conheça nossa história, missão, visão e valores.</p>
+          </Col>
+        </Row>
 
       {/* Seção sobre a empresa */}
       <Row className="align-items-center mb-5">
-        <Col md={6} className="text-center">
-          <Image id="imagemdaempresa" src="https://conaci.org.br/wp-content/uploads/2021/08/campanha-de-conscientizacao-sobre-a-prevencao-do-suicidio.jpg" fluid rounded />
+        <Col md={5} className="text-center">
+          <Image id="imagemdaempresa" src="https://i.imgur.com/jnBApsw.png" fluid rounded />
         </Col>
-        <Col md={6}>
+        <Col md={5}>
           <h2>Sobre a Empresa</h2>
           <p>
             Fundada em 2024, a Scoope tem se dedicado a proporcionar as melhores experiências

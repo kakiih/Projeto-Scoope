@@ -15,7 +15,7 @@ function Footer() {
           <a
             data-mdb-ripple-init
             className="btn btn-link btn-floating btn-lg text-body m-1"
-            href="https://www.facebook.com"
+            href="/"
             role="button"
             data-mdb-ripple-color="dark"
           >
@@ -26,7 +26,7 @@ function Footer() {
           <a
             data-mdb-ripple-init
             className="btn btn-link btn-floating btn-lg text-body m-1"
-            href="#!"
+            href="/"
             role="button"
             data-mdb-ripple-color="dark"
           >
@@ -37,7 +37,7 @@ function Footer() {
           <a
             data-mdb-ripple-init
             className="btn btn-link btn-floating btn-lg text-body m-1"
-            href="#!"
+            href="/"
             role="button"
             data-mdb-ripple-color="dark"
           >
@@ -48,7 +48,7 @@ function Footer() {
           <a
             data-mdb-ripple-init
             className="btn btn-link btn-floating btn-lg text-body m-1"
-            href="#!"
+            href="/"
             role="button"
             data-mdb-ripple-color="dark"
           >
@@ -59,7 +59,7 @@ function Footer() {
           <a
             data-mdb-ripple-init
             className="btn btn-link btn-floating btn-lg text-body m-1"
-            href="#!"
+            href="/"
             role="button"
             data-mdb-ripple-color="dark"
           >
@@ -70,7 +70,7 @@ function Footer() {
           <a
             data-mdb-ripple-init
             className="btn btn-link btn-floating btn-lg text-body m-1"
-            href="#!"
+            href="https://github.com/kakiih/Projeto-Scoope.git"
             role="button"
             data-mdb-ripple-color="dark"
           >
@@ -79,7 +79,6 @@ function Footer() {
         </section>
         {/* Section: Social media */}
       </div>
-      {/* Grid container */}
 
       {/* Copyright */}
       <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
