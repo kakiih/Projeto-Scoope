@@ -1,44 +1,51 @@
-import React, { useState } from 'react'; 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link, useNavigate } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Link, useNavigate } from "react-router-dom";
+import { GoogleLogin } from "@react-oauth/google";
 
 const TelaSign = () => {
+  const navigate = useNavigate();
+
+  const handleLoginSuccess = (credentialResponse) => {
+    // Armazenar os dados de login do Google no localStorage
+    localStorage.setItem("token", credentialResponse.credential); // Salva o token JWT
+    const userObject = JSON.parse(
+      atob(credentialResponse.credential.split(".")[1])
+    );
+    localStorage.setItem("user", JSON.stringify(userObject)); // Armazena o perfil do usuário
+    console.log("Login Successful with Google:", userObject);
+
+    // Redireciona para a página principal após login bem-sucedido
+    navigate("/");
+  };
+
+  const handleLoginError = () => {
+    console.log("Login Failed");
+  };
+
   const gradientCustom4 = {
-    background: 'linear-gradient(to right, #3b9ae7f8, #0b618b)',
+    background: "linear-gradient(to right, #3b9ae7f8, #0b618b)",
   };
 
-  const navigate = useNavigate(); // Iniciar useNavigate
-
-  const [cpf, setCpf] = useState(''); // Estado para armazenar o CPF
-
-  // Função para formatar o CPF
-  const handleCpfChange = (event) => {
-    const input = event.target.value
-      .replace(/\D/g, '') // Remove tudo que não é dígito
-      .slice(0, 11); // Limita a 11 caracteres
-
-    // Adiciona a formatação
-    let formattedCpf = input;
-    if (input.length > 6) {
-      formattedCpf = `${input.slice(0, 3)}.${input.slice(3, 6)}.${input.slice(6, 9)}-${input.slice(9, 11)}`;
-    } else if (input.length > 3) {
-      formattedCpf = `${input.slice(0, 3)}.${input.slice(3, 6)}`;
-    } else if (input.length > 0) {
-      formattedCpf = input.slice(0, 3);
-    }
-
-    setCpf(formattedCpf); // Atualiza o estado do CPF
-  };
-
-  // Função para lidar com a validação do formulário e redirecionar
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
+
     if (!form.checkValidity()) {
-      form.classList.add('was-validated');
+      form.classList.add("was-validated");
     } else {
-      // Se a validação for bem-sucedida, redireciona para a página principal
-      navigate('/');
+      // Pegar os dados do formulário
+      const name = form.name.value;
+      const email = form.email.value;
+      const password = form.form3Example4cg.value;
+
+      // Armazenar os dados de login no localStorage
+      localStorage.setItem("user", JSON.stringify({ name, email }));
+      localStorage.setItem("token", password); // Usando a senha como token para simular login
+
+      console.log("Form Submitted. User Info:", { name, email });
+
+      // Redireciona para a página principal
+      navigate("/");
     }
   };
 
@@ -48,7 +55,7 @@ const TelaSign = () => {
         <div className="container h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-12 col-md-9 col-lg-7 col-xl-6">
-              <div className="card" style={{ borderRadius: '15px' }}>
+              <div className="card" style={{ borderRadius: "15px" }}>
                 <div className="card-body p-5">
                   <h2 className="text-uppercase text-center mb-5">
                     Criar uma conta
@@ -58,6 +65,7 @@ const TelaSign = () => {
                       <input
                         type="text"
                         id="name"
+                        name="name"
                         className="form-control form-control-lg"
                         required
                       />
@@ -73,6 +81,7 @@ const TelaSign = () => {
                       <input
                         type="email"
                         id="email"
+                        name="email"
                         className="form-control form-control-lg"
                         required
                       />
@@ -86,39 +95,25 @@ const TelaSign = () => {
 
                     <div className="form-outline mb-4">
                       <input
-                        type="text"
-                        id="cpf"
-                        placeholder="000.000.000-00"
-                        value={cpf} // Usar o estado formatado do CPF
-                        onChange={handleCpfChange} // Adicionar o manipulador de eventos
-                        className="form-control form-control-lg"
-                        required
-                      />
-                      <label className="form-label" htmlFor="cpf">
-                        CPF
-                      </label>
-                      <div className="invalid-feedback">
-                        Por favor, insira seu CPF.
-                      </div>
-                    </div>
-
-                    <div className="form-outline mb-4">
-                      <input
                         type="password"
                         id="form3Example4cg"
+                        name="password"
                         className="form-control form-control-lg"
                         required
                       />
                       <label className="form-label" htmlFor="form3Example4cg">
                         Senha
                       </label>
-                      <div className="invalid-feedback">Por favor, insira uma senha.</div>
+                      <div className="invalid-feedback">
+                        Por favor, insira uma senha.
+                      </div>
                     </div>
 
                     <div className="form-outline mb-4">
                       <input
                         type="password"
                         id="form3Example4cdg"
+                        name="confirmPassword"
                         className="form-control form-control-lg"
                         required
                       />
@@ -134,12 +129,14 @@ const TelaSign = () => {
                       <input
                         className="form-check-input me-2"
                         type="checkbox"
-                        value=""
                         id="form2Example3cg"
                         required
                       />
-                      <label className="form-check-label col-6" htmlFor="form2Example3cg">
-                        Eu confirmo que li e concordo com os{' '}
+                      <label
+                        className="form-check-label col-6"
+                        htmlFor="form2Example3cg"
+                      >
+                        Eu confirmo que li e concordo com os{" "}
                         <a href="#!" className="text-body">
                           <u>Termos de serviço</u>
                         </a>
@@ -162,31 +159,16 @@ const TelaSign = () => {
                     <p className="text-center text-muted mt-5 mb-0">
                       Cadastre-se também com:
                     </p>
-                    <div className="row">
-                      <div className="d-flex justify-content-center align-items-center">
-                        <a
-                          data-mdb-ripple-init
-                          className="btn btn-link btn-floating btn-lg text-body m-1"
-                          href="https://www.facebook.com"
-                          role="button"
-                          data-mdb-ripple-color="dark"
-                        >
-                          <i className="fab fa-facebook-f"></i>
-                        </a>
-                        <a
-                          data-mdb-ripple-init
-                          className="btn btn-link btn-floating btn-lg text-body m-1"
-                          href="#!"
-                          role="button"
-                          data-mdb-ripple-color="dark"
-                        >
-                          <i className="fab fa-google"></i>
-                        </a>
-                      </div>
+
+                    <div className="d-flex justify-content-center mt-3">
+                      <GoogleLogin
+                        onSuccess={handleLoginSuccess}
+                        onError={handleLoginError}
+                      />
                     </div>
 
                     <p className="text-center text-muted mt-5 mb-0">
-                      Já tem uma conta? faça o{' '}
+                      Já tem uma conta? faça o{" "}
                       <Link to="/login" className="fw-bold text-body">
                         <u>Login aqui</u>
                       </Link>

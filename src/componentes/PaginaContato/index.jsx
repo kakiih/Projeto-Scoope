@@ -58,7 +58,6 @@ const Contato = () => {
               <Form.Label>Mensagem</Form.Label>
               <Form.Control as="textarea" rows={4} placeholder="Digite sua mensagem" required />
             </Form.Group>
-
             <Button type="submit" style={gradientCustom}>
               Enviar
             </Button>

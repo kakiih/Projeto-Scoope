@@ -1,34 +1,49 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { useNavigate } from 'react-router-dom'; // Importar useNavigate
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useNavigate } from "react-router-dom";
+import { GoogleLogin } from "@react-oauth/google";
+
+const handleLoginSuccess = (credentialResponse) => {
+  // Armazenar os dados de login no localStorage
+  localStorage.setItem("token", credentialResponse.credential); // Salva o token JWT
+  console.log("Login Successful", credentialResponse);
+  
+  // Para armazenar mais dados, como o perfil do usuário, você pode decodificar o token
+  const userObject = JSON.parse(atob(credentialResponse.credential.split('.')[1]));
+  localStorage.setItem("user", JSON.stringify(userObject)); // Armazena o perfil do usuário
+  console.log("User Profile:", userObject);
+  
+  // Redirecionar ou fazer outra ação após o login
+};
+
+const handleLoginError = () => {
+  console.log("Login Failed");
+};
 
 const TelaLogin = () => {
   const gradientCustom4 = {
-    background: 'linear-gradient(to right, #3b9ae7f8, #0b618b)',
+    background: "linear-gradient(to right, #3b9ae7f8, #0b618b)",
   };
 
-  // Função para lidar com a validação do formulário
-  const navigate = useNavigate(); // Iniciar useNavigate
+  const navigate = useNavigate();
 
-  // Função para lidar com a validação do formulário e redirecionar
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
     if (!form.checkValidity()) {
-      form.classList.add('was-validated');
+      form.classList.add("was-validated");
     } else {
-      // Se a validação for bem-sucedida, redireciona para a página principal
-      navigate('/');
+      navigate("/");
     }
   };
 
   return (
-    <section style={{ height: '100vh' }}>
+    <section style={{ height: "100vh" }}>
       <div className="mask d-flex align-items-center h-100">
         <div className="container h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-12 col-md-9 col-lg-7 col-xl-6">
-              <div className="card" style={{ borderRadius: '15px' }}>
+              <div className="card" style={{ borderRadius: "15px" }}>
                 <div className="card-body p-5">
                   <h2 className="text-uppercase text-center mb-5">
                     Entrar na conta
@@ -74,31 +89,15 @@ const TelaLogin = () => {
                       </button>
                     </div>
 
-                    <div className="row">
-                      <div className="d-flex justify-content-center align-items-center">
-                        <a
-                          data-mdb-ripple-init
-                          className="btn btn-link btn-floating btn-lg text-body m-1"
-                          href="https://www.facebook.com"
-                          role="button"
-                          data-mdb-ripple-color="dark"
-                        >
-                          <i className="fab fa-facebook-f"></i>
-                        </a>
-                        <a
-                          data-mdb-ripple-init
-                          className="btn btn-link btn-floating btn-lg text-body m-1"
-                          href="#!"
-                          role="button"
-                          data-mdb-ripple-color="dark"
-                        >
-                          <i className="fab fa-google"></i>
-                        </a>
-                      </div>
+                    <div className="d-flex justify-content-center mt-3">
+                      <GoogleLogin
+                        onSuccess={handleLoginSuccess}
+                        onError={handleLoginError}
+                      />
                     </div>
 
                     <p className="text-center text-muted mt-5 mb-0">
-                      Não tem uma conta?{' '}
+                      Não tem uma conta?{" "}
                       <a href="/sign" className="fw-bold text-body">
                         <u>Registre-se</u>
                       </a>
