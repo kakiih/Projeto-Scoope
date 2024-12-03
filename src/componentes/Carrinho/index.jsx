@@ -51,7 +51,7 @@ const Carrinho = () => {
   };
 
   const finalizarCompra = () => {
-    alert("Compra finalizada! Obrigado por escolher a Scoop Turismo.");
+    alert("Compra finalizada! Obrigado por escolher a Scoope Turismo.");
     localStorage.removeItem("carrinho");
     setCarrinho([]);
     setTotal(0);
