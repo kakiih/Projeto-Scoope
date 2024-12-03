@@ -1,6 +1,14 @@
-import React from 'react';
-import { Card, Button, Container, Row, Col } from 'react-bootstrap';
-import './index.scss'; // Importa o arquivo de estilos
+import React from "react";
+import { Card, Button, Container, Row, Col } from "react-bootstrap";
+import "./index.scss"; // Importa o arquivo de estilos
+
+const adicionarAoCarrinho = (nome, preco, imagem) => {
+  const carrinhoAtual = JSON.parse(localStorage.getItem("carrinho")) || [];
+  const novoItem = { nome, preco };
+  carrinhoAtual.push(novoItem);
+  localStorage.setItem("carrinho", JSON.stringify(carrinhoAtual));
+  alert("Item adicionado ao carrinho!");
+};
 
 const CompraDestino = ({ destino }) => {
   return (
@@ -25,31 +33,82 @@ const CompraDestino = ({ destino }) => {
                   <li>Opções de passeios adicionais</li>
                 </ul>
               </Card.Text>
-              <Button variant="primary" href="#compra">Adicionar ao carrinho</Button>
+              <button
+                className="btn btn-primary"
+                onClick={() =>
+                  adicionarAoCarrinho(
+                    destino.nome,
+                    destino.preco,
+                    destino.imagem
+                  )
+                }
+              >
+                Adicionar ao Carrinho
+              </button>
             </Card.Body>
           </Card>
         </Col>
         <Col md={6}>
           <h3>Detalhes da Compra</h3>
-          <p>Escolha o pacote que melhor se adapta às suas necessidades e aproveite uma experiência inesquecível. Os pacotes incluem transporte, guias especializados e uma variedade de opções de passeios.</p>
+          <p>
+            Escolha o pacote que melhor se adapta às suas necessidades e
+            aproveite uma experiência inesquecível. Os pacotes incluem
+            transporte, guias especializados e uma variedade de opções de
+            passeios.
+          </p>
           <form>
             <div className="mb-3">
-              <label htmlFor="nome" className="form-label">Nome Completo</label>
-              <input type="text" className="form-control" id="nome" placeholder="Seu nome completo" required />
+              <label htmlFor="nome" className="form-label">
+                Nome Completo
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="nome"
+                placeholder="Seu nome completo"
+                required
+              />
             </div>
             <div className="mb-3">
-              <label htmlFor="email" className="form-label">E-mail</label>
-              <input type="email" className="form-control" id="email" placeholder="Seu e-mail" required />
+              <label htmlFor="email" className="form-label">
+                E-mail
+              </label>
+              <input
+                type="email"
+                className="form-control"
+                id="email"
+                placeholder="Seu e-mail"
+                required
+              />
             </div>
             <div className="mb-3">
-              <label htmlFor="telefone" className="form-label">Telefone</label>
-              <input type="tel" className="form-control" id="telefone" placeholder="Seu telefone" required />
+              <label htmlFor="telefone" className="form-label">
+                Telefone
+              </label>
+              <input
+                type="tel"
+                className="form-control"
+                id="telefone"
+                placeholder="Seu telefone"
+                required
+              />
             </div>
             <div className="mb-3">
-              <label htmlFor="quantidade" className="form-label">Quantidade de Pessoas</label>
-              <input type="number" className="form-control" id="quantidade" placeholder="Número de pessoas" min="1" required />
+              <label htmlFor="quantidade" className="form-label">
+                Quantidade de Pessoas
+              </label>
+              <input
+                type="number"
+                className="form-control"
+                id="quantidade"
+                placeholder="Número de pessoas"
+                min="1"
+                required
+              />
             </div>
-            <Button variant="primary" type="submit">Finalizar Compra</Button>
+            <Button variant="primary" type="submit">
+              Finalizar Compra
+            </Button>
           </form>
         </Col>
       </Row>

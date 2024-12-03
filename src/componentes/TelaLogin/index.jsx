@@ -7,12 +7,14 @@ const handleLoginSuccess = (credentialResponse) => {
   // Armazenar os dados de login no localStorage
   localStorage.setItem("token", credentialResponse.credential); // Salva o token JWT
   console.log("Login Successful", credentialResponse);
-  
+
   // Para armazenar mais dados, como o perfil do usuário, você pode decodificar o token
-  const userObject = JSON.parse(atob(credentialResponse.credential.split('.')[1]));
+  const userObject = JSON.parse(
+    atob(credentialResponse.credential.split(".")[1])
+  );
   localStorage.setItem("user", JSON.stringify(userObject)); // Armazena o perfil do usuário
   console.log("User Profile:", userObject);
-  
+
   // Redirecionar ou fazer outra ação após o login
 };
 
@@ -38,8 +40,8 @@ const TelaLogin = () => {
   };
 
   return (
-    <section style={{ height: "100vh" }}>
-      <div className="mask d-flex align-items-center h-100">
+    <section className="login-section">
+      <div className="mask d-flex align-items-center h-100 login-card">
         <div className="container h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-12 col-md-9 col-lg-7 col-xl-6">

@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+}
+
+.carrinho-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.carrinho-title {
+  height: 70px;
+  border-bottom: 2px solid #007bff; /* Cor azul principal */
+  padding: 20px 30px;
+  color: #333333;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.item {
+  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e1e8ee;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.cart-buttons {
+  position: relative;
+  padding-top: 10px;
+  margin-right: 30px;
+}
+.delete-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: red; /* Cor do ícone de deletar */
+  font-size: 18px;
+}
+
+.like-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ff4500; /* Cor do ícone de coração */
+  font-size: 18px;
+}
+
+.is-active {
+  animation-name: animate;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(28);
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.description {
+  padding-top: 10px;
+  margin-right: 30px;
+  flex: 1;
+}
+
+.description span {
+  display: block;
+  font-size: 14px;
+  color: #43484d;
+  font-weight: 400;
+}
+
+.description span:first-child {
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.description span:last-child {
+  font-weight: 300;
+  margin-top: 4px;
+  margin-left: 10px;
+  color: #86939e;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity input {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+button[class*="delbut"] {
+  width: 30px;
+  height: 30px;
+  background-color: #007bff; /* Cor azul do site */
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+button[class*="delbut"]:hover {
+  background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+.total-price {
+  width: 100px;
+  text-align: center;
+  font-size: 16px;
+  color: #43484d;
+  font-weight: 500;
+}
+
+.summary {
+  padding: 20px 30px;
+  border-top: 2px solid #007bff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary p {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+}
+
+.summary button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.summary button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .shopping-cart {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .item {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .description {
+    margin: 10px 0;
+  }
+
+  .image img {
+    width: 80px;
+  }
+
+  .summary {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 44vh;
+}
+.carrinhovazio {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e1e8ee;
+}
