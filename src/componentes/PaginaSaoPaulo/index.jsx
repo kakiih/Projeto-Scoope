@@ -3,7 +3,7 @@ import CompraDestino from "../../Rotas/Comprar";
 
 const SaoPauloPage = () => {
   const SaoPaulo = {
-    nome: "SaoPaulo",
+    nome: "Sao Paulo",
     imagem:
       "https://images.pexels.com/photos/19767241/pexels-photo-19767241/free-photo-of-av-paulista.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     descricao:

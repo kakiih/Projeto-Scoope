@@ -30,8 +30,7 @@ const destinos = [
   },
   {
     nome: "Recife",
-    imagem:
-      "https://images.pexels.com/photos/12988107/pexels-photo-12988107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    imagem: "https://emrecife.com.br/wp-content/uploads/2024/01/Recife-2.jpg",
     descricao: "Conhecida por suas pontes, praia e cultura.",
     redirecionamento: "/recife",
     preco: "R$ 1700",

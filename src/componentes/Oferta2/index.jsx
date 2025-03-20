@@ -5,7 +5,7 @@ const FlorianopolisPage = () => {
   const Florianopolis = {
     nome: "Florianópolis",
     imagem:
-      "https://images.pexels.com/photos/21012186/pexels-photo-21012186/free-photo-of-atardecer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://maisviagens.net.br/wp-content/uploads/2022/01/FLORIPA.jpg",
     descricao:
       "Florianópolis, localizada em Santa Catarina, é famosa por suas belas praias e vida noturna animada. A cidade também é conhecida por sua rica cultura açoriana e oferece muitas opções de esportes aquáticos e passeios ao ar livre.",
     preco: 3000,

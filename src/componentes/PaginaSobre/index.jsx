@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Image, Card } from 'react-bootstrap';
 import './index.scss'; // Arquivo de estilização separado
+import scoopeturismoimg from "../../assets/img/SCOOPE.png"
 
 const SobreNos = () => {
   const gradientCustom = {
@@ -23,7 +24,7 @@ const SobreNos = () => {
       {/* Seção sobre a empresa */}
       <Row className="align-items-center mb-5">
         <Col md={5} className="text-center">
-          <Image id="imagemdaempresa" src="https://i.imgur.com/jnBApsw.png" fluid rounded />
+          <Image id="imagemdaempresa" src={scoopeturismoimg} fluid rounded />
         </Col>
         <Col md={5}>
           <h2>Sobre a Empresa</h2>

@@ -69,14 +69,12 @@ const Carrinho = () => {
           {carrinho.map((item, index) => (
             <div className="item" key={index}>
               <div className="buttons-car">
-                <div className="buttons-car">
-                  <button
-                    className="delete-delbut"
-                    onClick={() => removerItem(index)}
-                  >
-                    <i className="fas fa-trash-alt"></i>{" "}
-                  </button>
-                </div>
+                <button
+                  className="delete-delbut"
+                  onClick={() => removerItem(index)}
+                >
+                  <i className="fas fa-trash-alt"></i>{" "}
+                </button>
               </div>
 
               <div className="description">
@@ -86,19 +84,19 @@ const Carrinho = () => {
 
               <div className="quantity">
                 <button
-                  className="plus-delbut"
-                  type="button"
-                  onClick={() => alterarQuantidade(index, "incrementar")}
-                >
-                  +
-                </button>
-                <input type="text" value={item.quantidade || 1} readOnly />
-                <button
                   className="minus-delbut"
                   type="button"
                   onClick={() => alterarQuantidade(index, "decrementar")}
                 >
                   -
+                </button>
+                <input type="text" value={item.quantidade || 1} readOnly />
+                <button
+                  className="plus-delbut"
+                  type="button"
+                  onClick={() => alterarQuantidade(index, "incrementar")}
+                >
+                  +
                 </button>
               </div>
 

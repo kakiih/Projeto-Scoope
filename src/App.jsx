@@ -22,6 +22,7 @@ import CuritibaPage from "./componentes/Oferta3";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import Carrinho from "./componentes/Carrinho";
 import Pacotes from "./componentes/Pacotes";
+import Destinos from "./componentes/Destinos";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             <Route path="/florianopolis" element={<FlorianopolisPage />} />
             <Route path="/curitiba" element={<CuritibaPage />} />
             <Route path="/pacotes" element={<Pacotes />} />
+            <Route path="/destinos" element={<Destinos />} />
             <Route path="/carrinho" element={<Carrinho />}></Route>
           </Routes>
           <Footer />

@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/js/bootstrap.bundle.min"; // Certifique-se de que o JS do Bootstrap está importado
+import scoopeturismologo from "../../assets/icons/scoopeturismo.png";
 
 function NavBar() {
   const navbarRef = useRef(null);
@@ -45,7 +46,7 @@ function NavBar() {
           {" "}
           {/* Texto Branco */}
           <img
-            src="https://i.imgur.com/qlXlrFc.png"
+            src={scoopeturismologo}
             alt="Logomarca"
             style={{ height: "50px" }}
           />
