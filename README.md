@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# 🧭 Scoope Turismo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Scoope Turismo** é uma plataforma web que permite aos usuários montar seu próprio pacote de viagem personalizado, incluindo transporte, hospedagem, roteiros turísticos e muito mais. O projeto foi desenvolvido como parte do curso Técnico em Desenvolvimento de Sistemas na ETEJBL.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Objetivo
 
-### `npm start`
+Oferecer uma solução completa e personalizada para planejamento de viagens, conectando o usuário a empresas parceiras e facilitando a criação de pacotes únicos e acessíveis.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tecnologias Utilizadas
 
-### `npm test`
+### Frontend:
+- **React.js**
+- **HTML5 / CSS3**
+- **JavaScript (ES6+)**
+- **Axios** para requisições HTTP
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend:
+- **Node.js**
+- **Express**
+- **MySQL** (banco de dados relacional)
+- **Sequelize** (ORM)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🗂 Funcionalidades
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ✈️ Criação de pacotes de viagem personalizados  
+- 🏨 Escolha de hospedagem, roteiro e transporte  
+- 🧑‍💼 Integração com empresas e equipes parceiras  
+- 🗃️ Cadastro, listagem, atualização e remoção de seleções (CRUD)  
+- 🔐 Validação de dados no backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📁 Estrutura do Projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+scoope/
+│
+├── frontend/ # Aplicação React
+│ ├── public/
+│ └── src/
+│ ├── components/
+│ ├── pages/
+│ ├── services/
+│ └── App.js
+│
+├── backend/ # API em Node.js
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ ├── infra/ # Configuração de banco e conexão
+│ ├── app.js
+│ └── server.js
+│
+└── README.md
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+yaml
+Copiar
+Editar
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ⚙️ Como rodar o projeto
 
-## Learn More
+### 1. Clone o repositório:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+git clone https://github.com/seu-usuario/scoope-turismo.git
+2. Instale as dependências:
+Backend:
+bash
+Copiar
+Editar
+cd backend
+npm install
+Frontend:
+bash
+Copiar
+Editar
+cd ../frontend
+npm install
+3. Configure o banco de dados:
+Crie um banco MySQL e atualize as credenciais no arquivo de configuração (infra/config.js ou .env).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Execute os scripts de criação de tabela, se necessário.
 
-### Code Splitting
+4. Execute a aplicação:
+Backend:
+bash
+Copiar
+Editar
+npm start
+Frontend:
+bash
+Copiar
+Editar
+npm start
+📌 Status do Projeto
+🔧 Em desenvolvimento — funcionalidades principais implementadas e integração com banco iniciada.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+👨‍💻 Desenvolvido por
+Miguel Silva Fialho
+LinkedIn | miguelfialho1234@gmail.com
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📃 Licença
+Este projeto está sob a licença MIT.
