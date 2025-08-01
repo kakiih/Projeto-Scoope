@@ -36,34 +36,6 @@ Oferecer uma solução completa e personalizada para planejamento de viagens, co
 
 ---
 
-## 📁 Estrutura do Projeto
-
-scoope/
-│
-├── frontend/ # Aplicação React
-│ ├── public/
-│ └── src/
-│ ├── components/
-│ ├── pages/
-│ ├── services/
-│ └── App.js
-│
-├── backend/ # API em Node.js
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ ├── infra/ # Configuração de banco e conexão
-│ ├── app.js
-│ └── server.js
-│
-└── README.md
-
-yaml
-Copiar
-Editar
-
----
-
 ## ⚙️ Como rodar o projeto
 
 ### 1. Clone o repositório:
@@ -89,15 +61,13 @@ Execute os scripts de criação de tabela, se necessário.
 
 4. Execute a aplicação:
 Backend:
-bash
-Copiar
-Editar
+
 npm start
+
 Frontend:
-bash
-Copiar
-Editar
+
 npm start
+
 📌 Status do Projeto
 🔧 Em desenvolvimento — funcionalidades principais implementadas e integração com banco iniciada.
 
