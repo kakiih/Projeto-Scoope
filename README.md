@@ -40,7 +40,7 @@ Oferecer uma solução completa e personalizada para planejamento de viagens, co
 
 ### 1. Clone o repositório:
 
-git clone https://github.com/seu-usuario/scoope-turismo.git
+git clone https://github.com/kakiih/scoope-turismo.git
 2. Instale as dependências:
 Backend:
 bash
