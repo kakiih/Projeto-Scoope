@@ -43,19 +43,13 @@ Oferecer uma solução completa e personalizada para planejamento de viagens, co
 git clone https://github.com/kakiih/scoope-turismo.git
 2. Instale as dependências:
 Backend:
-bash
-Copiar
-Editar
-cd backend
+cd Backend_scoope_turismo
 npm install
 Frontend:
-bash
-Copiar
-Editar
-cd ../frontend
+cd scoope_turismo
 npm install
 3. Configure o banco de dados:
-Crie um banco MySQL e atualize as credenciais no arquivo de configuração (infra/config.js ou .env).
+Crie um banco MySQL e atualize as credenciais no arquivo de configuração 
 
 Execute os scripts de criação de tabela, se necessário.
 
